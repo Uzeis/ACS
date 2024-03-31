@@ -95,7 +95,12 @@ a:focus {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
+.sticky-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* You may need to adjust the z-index based on your layout */
+}
 .hero_area .hero_bg_box {
   position: absolute;
   top: 0;
@@ -145,13 +150,24 @@ a:focus {
 
 .navbar-brand span {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 14px;
   color: #ffffff;
 }
 
 .custom_nav-container {
-  padding: 0;
+  padding-top: 25px;
+  height: 86px; /* Set a fixed height */
+  background-color: white;
+  left: 0; /* Align to the left */
+  transition: background-color 0.3s; /* Add transition for smooth color change */
 }
+
+
+
+
+
+
+
 
 .custom_nav-container .navbar-nav {
   margin-left: auto;
@@ -159,7 +175,7 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 5px 20px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
@@ -168,82 +184,15 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #00bbf0;
+  color: red;
 }
 
 .custom_nav-container .navbar-nav .nav-item.active .nav-link {
   font-weight: 600;
 }
 
-.custom_nav-container .nav_search-btn {
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-  color: #ffffff;
-}
 
-.custom_nav-container .nav_search-btn:hover {
-  color: #00bbf0;
-}
 
-.custom_nav-container .navbar-toggler {
-  outline: none;
-}
-
-.custom_nav-container .navbar-toggler {
-  padding: 0;
-  width: 37px;
-  height: 42px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.custom_nav-container .navbar-toggler span {
-  display: block;
-  width: 35px;
-  height: 4px;
-  background-color: #ffffff;
-  margin: 7px 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  position: relative;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-.custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #ffffff;
-  top: -10px;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.custom_nav-container .navbar-toggler span::after {
-  top: 10px;
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before, .custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  top: 0;
-}
 
 /*end header section*/
 /* slider section */
@@ -303,35 +252,36 @@ a:focus {
   width: 165px;
 }
 
-.slider_section .detail-box .btn-box .btn1 {
+.slider_section .detail-box .btn-box .btn1,
+.slider_section .detail-box .btn-box .btn2 {
   display: inline-block;
-  padding: 10px 15px;
-  background-color: #00bbf0;
+  padding: 10px 20px; /* Slightly increased padding for better clickability */
   color: #ffffff;
-  border-radius: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   border: none;
+  border-radius: 6px; /* Slightly increased border radius */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Ensure text is bold */
 }
 
-.slider_section .detail-box .btn-box .btn1:hover {
-  background-color: #007fa4;
+.slider_section .detail-box .btn-box .btn1 {
+  background-color: #00bbf0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
 }
 
 .slider_section .detail-box .btn-box .btn2 {
-  display: inline-block;
-  padding: 10px 15px;
   background-color: #000000;
-  color: #ffffff;
-  border-radius: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
 }
 
+.slider_section .detail-box .btn-box .btn1:hover,
 .slider_section .detail-box .btn-box .btn2:hover {
-  background-color: black;
+  background-color: #007fa4; /* Lighter shade on hover */
+  color: #ffffff; /* White text on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
+
 
 .slider_section .img-box {
   margin: 45px 0;

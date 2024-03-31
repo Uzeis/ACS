@@ -472,22 +472,28 @@ a:focus {
 }
 
 .about_section .detail-box a:hover {
-  background-color: #007fa4;
+  background-color: #721515;
+}
+
+/* Updated styles for the "Why Choose Us" section */
+.why_section .why_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .why_section .box {
-  margin-top: 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  width: calc(25% - 20px); /* Adjust width as needed */
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.why_section .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 .why_section .box .img-box {
@@ -498,19 +504,14 @@ a:focus {
   min-height: 120px;
   border-radius: 100%;
   border: 5px solid #00204a;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 }
 
 .why_section .box .img-box img {
-  width: 55px;
+  width: 70px; /* Increased image size */
   height: auto;
   fill: #00204a;
 }
@@ -518,37 +519,67 @@ a:focus {
 .why_section .box h5 {
   font-weight: bold;
   margin-bottom: 10px;
+  color: #00204a; /* Text color */
 }
 
 .why_section .box p {
   margin-bottom: 0;
+  color: #444; /* Text color */
 }
 
 .why_section .btn-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100%;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 45px;
 }
 
 .why_section .btn-box a {
   display: inline-block;
-  padding: 10px 45px;
+  padding: 12px 50px; /* Increased padding */
   background-color: #00bbf0;
   color: #ffffff;
-  border-radius: 0;
-  -webkit-transition: all 0.3s;
+  border-radius: 30px; /* Rounded border */
   transition: all 0.3s;
-  border: none;
+  border: 2px solid transparent; /* Added border */
+  text-decoration: none;
 }
 
 .why_section .btn-box a:hover {
   background-color: #007fa4;
+  border-color: #007fa4; /* Change border color on hover */
 }
-
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.counter-item {
+  width: 200px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.counter-item:hover {
+  transform: scale(1.05);
+}
+.counter-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.counter-label {
+  font-size: 20px;
+  color: #666;
+}
 /*team section */
 .team_section {
   text-align: center;

@@ -7,6 +7,35 @@ function getYear() {
 
 getYear();
 
+function animateCounter(element, target) {
+    let count = 0;
+    const speed = 100; // milliseconds
+    const increment = Math.ceil(target / (1000 / speed)); // Divide target number by 1000 milliseconds and round up
+    const timer = setInterval(() => {
+      count += increment;
+      if (count >= target) {
+        clearInterval(timer);
+        count = target;
+      }
+      element.textContent = count;
+    }, speed);
+  }
+  
+  // Get counter elements
+  const schoolsCounter = document.getElementById('schoolsCounter');
+  const consultancyCounter = document.getElementById('consultancyCounter');
+  const studentsCounter = document.getElementById('studentsCounter');
+  
+  // Define target values
+  const schoolsTarget = 30;
+  const consultancyTarget = 40;
+  const studentsTarget = 1000;
+  
+  // Animate counters
+  animateCounter(schoolsCounter, schoolsTarget);
+  animateCounter(consultancyCounter, consultancyTarget);
+  animateCounter(studentsCounter, studentsTarget);
+  
 
 // client section owl carousel
 $(".client_owl-carousel").owlCarousel({

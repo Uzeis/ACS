@@ -419,7 +419,7 @@ a:focus {
 
 .service_section .btn-box a {
   display: inline-block;
-  padding: 10px 45px;
+  padding: 10px 30px;
   background-color: #00bbf0;
   color: #ffffff;
   border-radius: 0;
@@ -433,7 +433,7 @@ a:focus {
 }
 
 .about_section {
-  background-color: #00204a;
+  background-color: #571e1e;
   color: #ffffff;
 }
 

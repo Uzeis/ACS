@@ -805,3 +805,57 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* CSS for Services Section */
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.service {
+  flex: 0 0 calc(33.33% - 20px);
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.service header .img-box {
+  width: 80px; /* Adjust the width of the image box */
+  height: 80px; /* Adjust the height of the image box */
+  margin-right: 20px;
+}
+
+.service header img {
+  width: 100%; /* Make the image fill its container */
+  height: 100%;
+  border-radius: 50%;
+}
+
+.service h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.service p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}

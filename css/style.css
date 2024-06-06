@@ -811,7 +811,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 35px;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -836,8 +836,8 @@ body {
 }
 
 .service header .img-box {
-  width: 80px; /* Adjust the width of the image box */
-  height: 80px; /* Adjust the height of the image box */
+  width: 90px; /* Adjust the width of the image box */
+  height: 90px; /* Adjust the height of the image box */
   margin-right: 20px;
 }
 

@@ -808,21 +808,24 @@ body {
 /* CSS for Services Section */
 
 .services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 30px;
+  justify-items: center;
   margin: 0 auto;
   max-width: 1200px;
 }
 
 .service {
-  flex: 0 0 calc(33.33% - 20px);
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  text-align: center;
+  background-size: contain; /* Adjust background size */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .service:hover {
@@ -830,25 +833,15 @@ body {
 }
 
 .service header {
-  display: flex;
-  align-items: center;
   margin-bottom: 15px;
-}
-
-.service header .img-box {
-  width: 90px; /* Adjust the width of the image box */
-  height: 90px; /* Adjust the height of the image box */
-  margin-right: 20px;
-}
-
-.service header img {
-  width: 100%; /* Make the image fill its container */
-  height: 100%;
-  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .service h2 {
-  font-size: 20px;
+  font-size: 22px;
   color: #333;
   margin: 0;
   line-height: 1.2;
@@ -858,4 +851,28 @@ body {
   font-size: 16px;
   color: #666;
   line-height: 1.5;
+}
+
+.student {
+  background-image: url('../images/student1.png');
+}
+
+.visa {
+  background-image: url('../images/visa1.png');
+}
+
+.jobs {
+  background-image: url('../images/s3.png');
+}
+
+.remittance {
+  background-image: url('../images/Remittance1.png');
+}
+
+.tour {
+  background-image: url('../images/tour1.png');
+}
+
+.graphics {
+  background-image: url('../images/Web Designing.png');
 }

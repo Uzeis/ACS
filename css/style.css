@@ -808,24 +808,21 @@ body {
 /* CSS for Services Section */
 
 .services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 30px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
   margin: 0 auto;
   max-width: 1200px;
 }
 
 .service {
+  flex: 0 0 calc(33.33% - 20px);
   padding: 20px;
-  background-color: #f9f9f9;
+  position: relative; /* Position relative for absolute positioning of background */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  text-align: center;
-  background-size: contain; /* Adjust background size */
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .service:hover {
@@ -833,15 +830,15 @@ body {
 }
 
 .service header {
+  position: relative; /* Position relative for absolute positioning of background */
+  z-index: 1; /* Ensure text is on top of background */
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .service h2 {
-  font-size: 22px;
+  font-size: 20px;
   color: #333;
   margin: 0;
   line-height: 1.2;
@@ -853,26 +850,43 @@ body {
   line-height: 1.5;
 }
 
-.student {
-  background-image: url('../images/student1.png');
+/* Background image styles */
+.service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  z-index: 0; /* Ensure background is behind text */
+  opacity: 0.5; /* Decrease image opacity */
 }
 
-.visa {
-  background-image: url('../images/visa1.png');
+/* Background images and specific styles for each service */
+.student-counseling::before {
+  background-image: url('images/student1.png');
 }
 
-.jobs {
-  background-image: url('../images/s3.png');
+.visa-counseling::before {
+  background-image: url('images/visa1.png');
 }
 
-.remittance {
-  background-image: url('../images/Remittance1.png');
+.jobs::before {
+  background-image: url('images/s3.png');
 }
 
-.tour {
-  background-image: url('../images/tour1.png');
+.remittance::before {
+  background-image: url('images/Remittance1.png');
 }
 
-.graphics {
-  background-image: url('../images/Web Designing.png');
+.tour-travel::before {
+  background-image: url('images/tour1.png');
+}
+
+.graphics-designing::before {
+  background-image: url('images/Web Designing.png');
 }

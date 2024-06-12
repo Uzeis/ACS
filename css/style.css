@@ -596,67 +596,84 @@ a:focus {
  
 /* footer section*/
 .footer_section {
-  background-color: #721515;
+  background: #721515;
   padding: 10px 0;
-}
-
-.footer_section .container {
-  position: relative;
+  color: #ffffff;
 }
 
 .footer_col {
-  margin-bottom: 30px;
-}
-
-.footer_col h4 {
-  color: #ffffff;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.footer_col .contact_link_box {
-  margin-bottom: 15px;
-}
-
-.footer_col .contact_link_box a {
-  color: #ffffff;
-  text-decoration: none;
-  display: block;
   margin-bottom: 10px;
 }
 
-.footer_col .contact_link_box a i {
-  margin-right: 10px;
+.footer_link_box h4,
+.footer_contact h4,
+.footer_newsletter h4,
+.footer_social h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer_links a {
+  display: block;
+  margin-bottom: 10px;
   color: #ffffff;
+  text-decoration: none;
+}
+
+.footer_contact .contact_link_box a {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer_contact .contact_link_box a i {
+  margin-right: 10px;
 }
 
 .footer_social a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: #333;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
   margin-right: 10px;
-}
-
-.footer_social a:last-child {
-  margin-right: 0;
-}
-
-.footer_link_box .footer_links a {
-  display: block;
   color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 10px;
+  font-size: 20px;
 }
 
-.footer_link_box .footer_links a.active,
-.footer_link_box .footer_links a:hover {
-  color: #333;
+.footer_newsletter form {
+  display: flex;
+  flex-direction: column;
 }
+
+.footer_newsletter input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.footer_newsletter button {
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer_newsletter button:hover {
+  background: #0056b3;
+}
+
+.footer_section .text-center p {
+  margin: 0;
+  color: #d9e1e8;
+}
+
+@media (min-width: 768px) {
+  .footer_section .footer_col {
+    margin-bottom: 0;
+  }
+}
+
 
 /*# sourceMappingURL=style.css.map */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');

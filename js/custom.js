@@ -6,6 +6,58 @@ function getYear() {
 }
 
 getYear();
+var originalContent = {}; // Object to store original content of each element
+
+function translatePage() {
+  var slider = document.getElementById('languageToggle');
+  
+  if (slider.checked) {
+    translateElements(document.body, 'en', 'ja'); // Translate entire document to Japanese
+  } else {
+    translateElements(document.body, 'ja', 'en'); // Translate entire document back to English
+  }
+}
+
+function translateElements(element, sourceLang, targetLang) {
+  // Traverse through each child node of the element
+  for (var i = 0; i < element.childNodes.length; i++) {
+    var node = element.childNodes[i];
+
+    // Check if it's a text node and translate its content
+    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '') {
+      var originalText = node.textContent.trim();
+      if (!originalContent[node]) {
+        originalContent[node] = originalText; // Store original text if not already stored
+      }
+
+      // Translate text content
+      translateText(originalText, sourceLang, targetLang, function(translatedText) {
+        node.textContent = translatedText;
+      });
+    }
+
+    // Recursively translate child elements if there are any
+    if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+      translateElements(node, sourceLang, targetLang); // Exclude script and style elements
+    }
+  }
+}
+
+function translateText(text, sourceLang, targetLang, callback) {
+  var xhr = new XMLHttpRequest();
+  var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=' + sourceLang + '&tl=' + targetLang + '&dt=t&q=' + encodeURIComponent(text);
+
+  xhr.open('GET', url, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var response = JSON.parse(xhr.responseText);
+      var translatedText = response[0][0][0]; // Extract translated text
+      callback(translatedText);
+    }
+  };
+  xhr.send();
+}
+
 
 function animateCounter(element, target) {
     let count = 0;

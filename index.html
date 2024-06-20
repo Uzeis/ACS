@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>ACS</title>
+  <title id="title">ACS</title>
   
   <!-- Your existing stylesheets -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -19,25 +19,28 @@
   <header class="header_section">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container sticky-top">
-        <a class="navbar-brand" href="./index.html">
-          <img src="images/acslogo.png" alt="ACS Logo" style="max-width:280px; height:auto;">
-        </a>
+        <a class="navbar-brand" href="./index.html" id="brand">
+          <img src="images/pagelogo.png" alt="ACS Logo" style="max-width:280px; height: 80px;">    
+          <span class="brand-text">
+            <span class="brand-name">ABOARD CREATION</span> <span class="brand-slogan">ALL IN ONE SOLUTION</span>
+        </span>  
+      </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html" id="home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/about.html">About</a>
+              <a class="nav-link" href="./pages/about.html" id="about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/service.html">Services</a>
+              <a class="nav-link" href="./pages/service.html" id="services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/why.html">Profile</a>
+              <a class="nav-link" href="./pages/why.html" id="profile">Profile</a>
             </li>
             <li class="nav-item">
               <div id="google_translate_element"></div>
@@ -52,15 +55,14 @@
     </div>
   </header>
     
-    
-    <!-- end header section -->
-    <!-- slider section -->
-    <div class="hero_area">
-      <div class="hero_bg_box">
-        <div class="bg_img_box">
-          <img src="images/banner.jpg" alt="">
-        </div>
+  <!-- end header section -->
+  <!-- slider section -->
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/banner.jpg" alt="">
       </div>
+    </div>
     <section class="slider_section">
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -69,18 +71,14 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="detail-box">
-                    <h1>
+                    <h1 id="slider_heading">
                       ACS
                       <i>(Abroad Creation All In One Solution)</i>
                     </h1>
-                    <p>
+                    <p id="slider_paragraph">
                       "Welcome to ACS (Abroad Creation All-In-One Solution)! We specialize in a range of services in Japan, including web and graphic design. Our priority is your satisfaction. With our expert team, we're here to support your journey in Japan, ensuring your business and personal growth. At ACS, we listen, discuss, and enhance your ideas to meet your expectations. Gain access to our extensive network of successful Japanese business models. We tailor solutions to your preferences and aspirations, ensuring alignment with your vision for success.".
                     </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Read More
-                      </a>
-                    </div>
+                    
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -90,170 +88,155 @@
                 </div>
               </div>
             </div>
-          </div>
-        
-         
-        </div>
-        
+          </div>      
+        </div>    
       </div>
     </section>
-    
-
-    <!-- end slider section -->
   </div>
 
-
   <!-- service section -->
-
   <section class="service_section layout_padding">
     <div class="service_container">
-        <div class="container">
-            <div class="heading_container heading_center">
-                <h2>
-                    Our <span>Services</span>
-                </h2>
-                <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/student1.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Student Counseling
-                            </h5>
-                            <div class="btn-box">
-                                <a href="service.html">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/visa1.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Visa Counselling
-                            </h5>
-                            <div class="btn-box">
-                                <a href="service.html">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/s3.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Jobs (part-time & full time)
-                            </h5>
-                            <div class="btn-box">
-                                <a href="service.html">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/Remittance1.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Remittance
-                            </h5>
-                            <div class="btn-box">
-                                <a href="service.html">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/tour1.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Tour & Travel Package
-                            </h5>
-                            <div class="btn-box">
-                                <a href="service.html">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/Web Designing.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Graphics & Web Designing
-                            </h5>
-                            <div class="btn-box">
-                                <a href="service.html">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2 id="service_heading">
+            Our <span>Services</span>
+          </h2>
+          <p id="service_paragraph">
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+          </p>
         </div>
-    </div>
-</section>
-
-  
-
-  <!-- end service section -->
-
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container  ">
-      <div class="heading_container heading_center">
-        <h2>
-          About <span>Us</span>
-        </h2>
-        
-      </div>
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/student1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5 id="student_counseling_heading">
+                  Student Counseling
+                </h5>
+                <div class="btn-box">
+                  <a href="service.html" id="student_counseling_button">View</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              We Are ACS
-            </h3>
-            <p>
-              Greetings from ACS (All-In-One Solution for Abroad Creation)! As our name implies, we provide a wide range of services in Japan, such as graphic design and web design, among many others. Making certain that customers are happy with the services that ACS offers is our main objective. We are thrilled to join you on your exciting path of professional and personal growth in the Land of the Rising Sun as your trusted partner, together with our committed team of specialists. At ACS, we make an effort to comprehend your concepts, have dialogues about them, and improve them to satisfy your requirements and standards. Our team has a plethora of experience and understanding to offer you the direction and assistance you need at every turn in your journey.
-            </p>
-            <p>
-              This way, we can recommend solutions that align with your vision for success.
-            </p>
-            <a href="">
-              Read More
-            </a>
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/visa1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5 id="visa_counseling_heading">
+                  Visa Counselling
+                </h5>
+                <div class="btn-box">
+                  <a href="service.html" id="visa_counseling_button">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/s3.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5 id="jobs_heading">
+                  Jobs (part-time & full time)
+                </h5>
+                <div class="btn-box">
+                  <a href="service.html" id="jobs_button">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/Remittance1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5 id="remittance_heading">
+                  Remittance
+                </h5>
+                <div class="btn-box">
+                  <a href="service.html" id="remittance_button">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/tour1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5 id="tour_heading">
+                  Tour & Travel Package
+                </h5>
+                <div class="btn-box">
+                  <a href="service.html" id="tour_button">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/Web Designing.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5 id="graphics_heading">
+                  Graphics & Web Designing
+                </h5>
+                <div class="btn-box">
+                  <a href="service.html" id="graphics_button">View</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- end about section -->
+    
+    
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="about_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2 id="about_heading">
+            About <span>Us</span>
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="images/about-img.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-box">
+              <h3 id="about_us_heading">
+                We Are ACS
+              </h3>
+              <p id="about_us_paragraph_1">
+                Greetings from ACS (All-In-One Solution for Abroad Creation)! As our name implies, we provide a wide range of services in Japan, such as graphic design and web design, among many others. Making certain that customers are happy with the services that ACS offers is our main objective. Our knowledgeable team is ready to support you as you navigate Japan's complex terrain and achieve your professional and personal objectives.
+              </p>
+              <p id="about_us_paragraph_2">
+                At ACS, we value listening, discussing, and improving your ideas to meet your goals. You can use our wide network of effective Japanese business models if you work with us. Our solutions are specifically created to meet your requirements and objectives while also being in line with your vision for success.
+              </p>
+              <a href="./pages/about.html" class="btn1" id="about_us_button">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- why section -->
 
@@ -350,74 +333,82 @@
       <div class="container">
         <div class="row">
           
+          <!-- Column for the map (1/3 width on medium screens and above) -->
           <div class="col-md-4 col-lg-4 footer_col">
             <div class="google_map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143115.42656336346!2d139.89424171356848!3d35.68140988400196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6e4cc884cb319f%3A0xc072a0c7c34e57b6!2sACS%20%7C%20Abroad%20Creation%20All%20In%20One%20Solution!5e0!3m2!1sen!2snp!4v1717605835543!5m2!1sen!2snp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
           
-          <div class="col-md-4 col-lg-2 footer_col">
-            <div class="footer_link_box">
-              <h4>Quick Links</h4>
-              <div class="footer_links">
-                <a class="active" href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="service.html">Services</a>
-                <a href="why.html">Why Us</a>
-                <a href="team.html">Team</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
+          <!-- Column for the rest of the content (2/3 width on medium screens and above) -->
+          <div class="col-md-8 col-lg-8">
+            <div class="row">
+              <div class="col-md-4 col-lg-4 footer_col">
+                <div class="footer_link_box">
+                  <h4>Quick Links</h4>
+                  <div class="footer_links">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="service.html">Services</a>
+                    <a href="why.html">Why Us</a>
+                    <a href="team.html">Team</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          
-          <div class="col-md-4 col-lg-3 footer_col">
-            <div class="footer_contact">
-              <h4>Contact Us</h4>
-              <div class="contact_link_box">
-                <a href="">
-                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  <span>Chiba Prefecture, Chiba City, Hanamigawa Ward, Hanazono 1-7-2, Dai -8, Hanazono Building-304 ward, 262-0025, Japan</span>
-                </a>
-                <a href="tel:+81433075334">
-                  <i class="fa fa-phone" aria-hidden="true"></i>
-                  <span>Tel: +81 43-307-5334</span>
-                </a>
-                <a href="fax:+81433075142">
-                  <i class="fa fa-fax" aria-hidden="true"></i>
-                  <span>FAX: +81 43-307-5142</span>
-                </a>
-                <a href="mailto:info.acsjapan@gmail.com">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                  <span>info.acsjapan@gmail.com</span>
-                </a>
+              
+              <div class="col-md-4 col-lg-4 footer_col">
+                <div class="footer_contact">
+                  <h4>Contact Us</h4>
+                  <div class="contact_link_box">
+                    <a href="">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>Chiba Prefecture, Chiba City, Hanamigawa Ward, Hanazono 1-7-2, Dai -8, Hanazono Building-304 ward, 262-0025, Japan</span>
+                    </a>
+                    <a href="tel:+81433075334">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <span>Tel: +81 43-307-5334</span>
+                    </a>
+                    <a href="fax:+81433075142">
+                      <i class="fa fa-fax" aria-hidden="true"></i>
+                      <span>FAX: +81 43-307-5142</span>
+                    </a>
+                    <a href="mailto:info.acsjapan@gmail.com">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <span>info.acsjapan@gmail.com</span>
+                    </a>
+                  </div>
+                </div>
               </div>
+              
+              <div class="col-md-4 col-lg-4 footer_col">
+                <div class="footer_social mt-3">
+                  <h4>Follow Us</h4>
+                  <a href="https://www.facebook.com/profile.php?id=100094395917105">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.instagram.com/abroadcreationallinonesoution?igsh=MWt3cmpqYmk1OGl5&utm_source=qr">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              
             </div>
-          </div>
-          
-          <div class="col-md-4 col-lg-3 footer_col">
             
-            <div class="footer_social mt-3">
-              <h4>Follow Us</h4>
-              <a href="https://www.facebook.com/profile.php?id=100094395917105">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/abroadcreationallinonesoution?igsh=MWt3cmpqYmk1OGl5&utm_source=qr">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
+            <div class="row mt-4">
+              <div class="col-12 text-center">
+                <p>&copy; 2024 ACS | All Rights Reserved</p>
+              </div>
             </div>
+            
           </div>
           
         </div>
-       
-        <div class="row mt-4">
-          <div class="col-12 text-center">
-            <p>&copy; 2024 ACS | All Rights Reserved</p>
-          </div>
-        </div>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
+  
   </section>
   
   
@@ -428,59 +419,9 @@
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
+  <script src="js/indextranslate.js"></script>
 
   <!-- Translation Script -->
-  <script type="text/javascript">
-    var originalContent = {}; // Object to store original content of each element
-
-    function translatePage() {
-      var slider = document.getElementById('languageToggle');
-      if (slider.checked) {
-        translateElements(document.body, 'en', 'ja'); // Translate entire document to Japanese
-      } else {
-        translateElements(document.body, 'ja', 'en'); // Translate entire document back to English
-      }
-    }
-
-    function translateElements(element, sourceLang, targetLang) {
-      // Traverse through each child node of the element
-      for (var i = 0; i < element.childNodes.length; i++) {
-        var node = element.childNodes[i];
-
-        // Check if it's a text node and translate its content
-        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '') {
-          var originalText = node.textContent.trim();
-          if (!originalContent[node]) {
-            originalContent[node] = originalText; // Store original text if not already stored
-          }
-
-          // Translate text content
-          translateText(originalText, sourceLang, targetLang, function(translatedText) {
-            node.textContent = translatedText;
-          });
-        }
-
-        // Recursively translate child elements if there are any
-        if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
-          translateElements(node, sourceLang, targetLang); // Exclude script and style elements
-        }
-      }
-    }
-
-    function translateText(text, sourceLang, targetLang, callback) {
-      var xhr = new XMLHttpRequest();
-      var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=' + sourceLang + '&tl=' + targetLang + '&dt=t&q=' + encodeURIComponent(text);
-
-      xhr.open('GET', url, true);
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          var response = JSON.parse(xhr.responseText);
-          var translatedText = response[0][0][0]; // Extract translated text
-          callback(translatedText);
-        }
-      };
-      xhr.send();
-    }
-  </script>
+  
 </body>
 </html>

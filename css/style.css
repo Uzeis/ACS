@@ -139,56 +139,181 @@ a:focus {
   display: none;
 }
 
-.header_section {
-  padding: 15px 0;
-}
-
-.header_section .container-fluid {
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-.navbar-brand span {
-  font-weight: bold;
-  font-size: 14px;
-  color: #ffffff;
-}
-
+/* Navbar styling */
 .custom_nav-container {
-  padding-top: 25px;
-  height: 86px; /* Set a fixed height */
-  background-color: white;
-  left: 0; /* Align to the left */
-  transition: background-color 0.3s; /* Add transition for smooth color change */
+  background-color: #ffffff; /* Navbar background color */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a shadow */
+  margin-left: -15px; /* Shift navbar to the left */
+  padding-left: 20px; /* Adjust padding if necessary */
+   /* Example: Decrease top padding */
+  padding-bottom: 5px; /* Example: Decrease bottom padding */
+  /* You can also adjust height if necessary */
+  /* height: 50px; */ /* Example: Set a specific height if needed */
 }
 
 
-
-
-
-
-
-
-.custom_nav-container .navbar-nav {
-  margin-left: auto;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: Arial, sans-serif; /* Arial font for brand name */
+  color: black;
 }
 
-.custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 5px 20px;
-  color: #000000;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
 }
 
-.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+.brand-name {
+  font-weight: bold; /* Use Arial Bold */
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Arial font for brand name */
+}
+
+.brand-slogan {
+  font-family: Calibri, Arial, sans-serif; /* Calibri font for slogan */
+  font-weight: bold;
   color: red;
+  margin-top: 5px;
 }
 
-.custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  font-weight: 600;
+
+.navbar-toggler {
+    border: none; /* Remove default border */
+    background: none; /* Remove default background */
+    outline: none; /* Remove focus outline */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Ensure no outline on focus */
+}
+
+.navbar-toggler-icon {
+    width: 24px; /* Adjust width */
+    height: 2px; /* Adjust height */
+    background-color: #333; /* Toggler icon color */
+    display: block;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    background-color: #333; /* Toggler icon color */
+    width: 24px; /* Adjust width */
+    height: 2px; /* Adjust height */
+    display: block;
+    position: absolute;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px; /* Adjust top position */
+}
+
+.navbar-toggler-icon::after {
+    top: 8px; /* Adjust bottom position */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px; /* Optional: Adjust spacing between navbar items */
+}
+/* Active Navigation Item Styles */
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #800000; /* Soft red maroon background color */
+  color: #fff; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px 15px; /* Padding inside the link */
+}
+
+.navbar-nav .nav-item.active .nav-link:hover {
+  background-color: #660000; /* Darker shade of red maroon for hover */
+  color: #fff; /* Text color on hover */
+}
+
+/* Adjustments for the toggle button icon */
+.navbar-toggler-icon {
+  background-color: #800000; /* Color of the hamburger icon */
+}
+
+/* Adjustments for the active state of the toggle button icon */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: #660000; /* Color of the hamburger icon when expanded */
+}
+
+
+.navbar-nav .nav-link {
+    color: #333; /* Navbar link color */
+    font-weight: 500; /* Optional: Adjust font weight */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #721515; /* Navbar link hover/focus color */
+}
+
+/* Optional: Custom styles for the language toggle switch */
+/* Language Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+  background-image: url('../images/english.png'); /* Default image */
+  background-size: cover;
+}
+
+input:checked + .slider {
+  background-color: #680000; /* Updated color to match your theme */
+}
+
+input:checked + .slider::before {
+  transform: translateX(16px); /* Position for toggle switch */
+  background-image: url('../images/japan.png'); /* Image when slider is checked */
+}
+
+.slider.round {
+  border-radius: 24px; /* Optional: Round slider */
+}
+
+
+/* Media query for responsiveness */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-item {
+        margin-left: 0;
+    }
 }
 
 
@@ -595,84 +720,117 @@ a:focus {
 
  
 /* footer section*/
+/* Styling for the footer section */
 .footer_section {
-  background: #721515;
-  padding: 10px 0;
-  color: #ffffff;
+  background: linear-gradient(130deg, #6f1a21, #6b1a1a); /* Maroon red linear gradient */
+  color: white; /* White text color */
+  padding: 50px 0; /* Padding around the footer content */
 }
 
+/* Styling for the footer columns */
 .footer_col {
-  margin-bottom: 10px;
+  margin-bottom: 30px; /* Spacing between footer columns */
 }
 
-.footer_link_box h4,
-.footer_contact h4,
-.footer_newsletter h4,
-.footer_social h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+/* Styling for the Google Map iframe */
+.google_map {
+  position: relative;
+  overflow: hidden;
+  padding-top: 75%; /* Aspect ratio for the iframe (to maintain responsiveness) */
+}
+
+.google_map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Styling for footer links */
+.footer_link_box h4 {
+  font-size: 18px; /* Heading font size */
+  margin-bottom: 15px; /* Spacing below the heading */
+}
+
+.footer_links {
+  list-style-type: none; /* Remove default list styles */
+  padding-left: 0; /* Remove default padding */
 }
 
 .footer_links a {
-  display: block;
-  margin-bottom: 10px;
-  color: #ffffff;
-  text-decoration: none;
+  display: block; /* Display links as blocks */
+  color: inherit; /* Inherit text color */
+  margin-bottom: 5px; /* Spacing between links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.footer_contact .contact_link_box a {
-  display: block;
-  margin-bottom: 10px;
-  color: #ffffff;
-  text-decoration: none;
+.footer_links a:hover {
+  color: #f0f0f0; /* Link color on hover */
 }
 
-.footer_contact .contact_link_box a i {
-  margin-right: 10px;
+/* Styling for contact information */
+.footer_contact h4 {
+  font-size: 18px; /* Heading font size */
+  margin-bottom: 15px; /* Spacing below the heading */
+}
+
+.contact_link_box {
+  margin-top: 15px; /* Spacing above the contact links */
+}
+
+.contact_link_box a {
+  display: block; /* Display links as blocks */
+  color: inherit; /* Inherit text color */
+  margin-bottom: 10px; /* Spacing between links */
+  text-decoration: none; /* Remove underline */
+}
+
+.contact_link_box a i {
+  margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Styling for social media icons */
+.footer_social h4 {
+  font-size: 18px; /* Heading font size */
+  margin-bottom: 15px; /* Spacing below the heading */
 }
 
 .footer_social a {
-  margin-right: 10px;
-  color: #ffffff;
-  font-size: 20px;
+  display: inline-block; /* Display icons inline */
+  font-size: 24px; /* Icon size */
+  color: inherit; /* Inherit text color */
+  margin-right: 15px; /* Spacing between icons */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.footer_newsletter form {
-  display: flex;
-  flex-direction: column;
+.footer_social a:hover {
+  color: #f0f0f0; /* Icon color on hover */
 }
 
-.footer_newsletter input {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.footer_newsletter button {
-  padding: 10px;
-  border: none;
-  background: #007bff;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.footer_newsletter button:hover {
-  background: #0056b3;
-}
-
-.footer_section .text-center p {
-  margin: 0;
-  color: #d9e1e8;
-}
-
-@media (min-width: 768px) {
-  .footer_section .footer_col {
-    margin-bottom: 0;
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .google_map {
+    padding-top: 56.25%; /* Adjust aspect ratio for smaller screens (16:9 aspect ratio) */
   }
 }
+
+@media (max-width: 767.98px) {
+  .footer_col {
+    text-align: center; /* Center align columns on smaller screens */
+  }
+  
+  .footer_links {
+    text-align: left; /* Align links to the left on smaller screens */
+  }
+  
+  .contact_link_box {
+    text-align: left; /* Align contact links to the left on smaller screens */
+  }
+}
+
 
 
 /*# sourceMappingURL=style.css.map */

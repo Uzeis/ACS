@@ -140,17 +140,17 @@ a:focus {
 }
 
 /* Navbar styling */
+/* Navbar styling */
 .custom_nav-container {
   background-color: #ffffff; /* Navbar background color */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a shadow */
   margin-left: -15px; /* Shift navbar to the left */
   padding-left: 20px; /* Adjust padding if necessary */
-   /* Example: Decrease top padding */
+  /* Example: Decrease top padding */
   padding-bottom: 5px; /* Example: Decrease bottom padding */
   /* You can also adjust height if necessary */
   /* height: 50px; */ /* Example: Set a specific height if needed */
 }
-
 
 .navbar-brand {
   display: flex;
@@ -180,52 +180,59 @@ a:focus {
   margin-top: 5px;
 }
 
-
 .navbar-toggler {
-    border: none; /* Remove default border */
-    background: none; /* Remove default background */
-    outline: none; /* Remove focus outline */
+  border: none; /* Remove default border */
+  background: none; /* Remove default background */
+  outline: none; /* Remove focus outline */
 }
 
 .navbar-toggler:focus {
-    outline: none; /* Ensure no outline on focus */
+  outline: none; /* Ensure no outline on focus */
 }
 
 .navbar-toggler-icon {
-    width: 24px; /* Adjust width */
-    height: 2px; /* Adjust height */
-    background-color: #333; /* Toggler icon color */
-    display: block;
-    position: relative;
+  width: 24px; /* Adjust width */
+  height: 2px; /* Adjust height */
+  background-color: #333; /* Toggler icon color */
+  display: block;
+  position: relative;
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
-    content: "";
-    background-color: #333; /* Toggler icon color */
-    width: 24px; /* Adjust width */
-    height: 2px; /* Adjust height */
-    display: block;
-    position: absolute;
+  content: "";
+  background-color: #333; /* Toggler icon color */
+  width: 24px; /* Adjust width */
+  height: 2px; /* Adjust height */
+  display: block;
+  position: absolute;
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
 .navbar-toggler-icon::before {
-    top: -8px; /* Adjust top position */
+  top: -8px; /* Adjust top position */
 }
 
 .navbar-toggler-icon::after {
-    top: 8px; /* Adjust bottom position */
+  top: 8px; /* Adjust bottom position */
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: #660000; /* Color of the hamburger icon when expanded */
 }
 
 .navbar-nav .nav-item {
-    margin-left: 10px; /* Optional: Adjust spacing between navbar items */
+  margin-left: 10px; /* Optional: Adjust spacing between navbar items */
 }
+
 /* Active Navigation Item Styles */
 .navbar-nav .nav-item.active .nav-link {
   background-color: #800000; /* Soft red maroon background color */
   color: #fff; /* Text color */
   border-radius: 5px; /* Rounded corners */
   padding: 8px 15px; /* Padding inside the link */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 .navbar-nav .nav-item.active .nav-link:hover {
@@ -233,25 +240,14 @@ a:focus {
   color: #fff; /* Text color on hover */
 }
 
-/* Adjustments for the toggle button icon */
-.navbar-toggler-icon {
-  background-color: #800000; /* Color of the hamburger icon */
-}
-
-/* Adjustments for the active state of the toggle button icon */
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  background-color: #660000; /* Color of the hamburger icon when expanded */
-}
-
-
 .navbar-nav .nav-link {
-    color: #333; /* Navbar link color */
-    font-weight: 500; /* Optional: Adjust font weight */
+  color: #333; /* Navbar link color */
+  font-weight: 500; /* Optional: Adjust font weight */
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-    color: #721515; /* Navbar link hover/focus color */
+  color: #721515; /* Navbar link hover/focus color */
 }
 
 /* Optional: Custom styles for the language toggle switch */
@@ -308,12 +304,11 @@ input:checked + .slider::before {
   border-radius: 24px; /* Optional: Round slider */
 }
 
-
 /* Media query for responsiveness */
 @media (max-width: 991.98px) {
-    .navbar-nav .nav-item {
-        margin-left: 0;
-    }
+  .navbar-nav .nav-item {
+    margin-left: 0;
+  }
 }
 
 
@@ -881,28 +876,6 @@ body {
     margin-bottom: 15px;
 }
 
-.services ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.services ul li {
-    background: #f1f1f1;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 calc(33.333% - 30px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-align: center;
-}
-
-.services ul li:hover {
-    background-color: #e2e2e2;
-    transform: translateY(-3px);
-}
 
 .contact-info p {
     margin: 10px 0;
@@ -982,89 +955,171 @@ body {
 }
 /* CSS for Services Section */
 
+/* Section title */
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  color: maroon; /* Changed color to maroon */
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Services grid container */
+/* Services grid container */
 .services {
+  max-width: 1800px;
+  margin: 120px auto 0; /* Increased top margin further to move services down */
+  padding: 60px 0; /* Adjusted padding for top and bottom */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Service article */
+.services .service {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px; /* Increased padding for better content spacing */
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-  margin: 0 auto;
-  max-width: 1200px;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.service {
-  flex: 0 0 calc(33.33% - 20px);
-  padding: 20px;
-  position: relative; /* Position relative for absolute positioning of background */
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+/* Service hover effect */
+.services .service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
-.service:hover {
-  transform: translateY(-5px);
+/* Service header */
+.services .service header {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 
-.service header {
-  position: relative; /* Position relative for absolute positioning of background */
-  z-index: 1; /* Ensure text is on top of background */
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.service h2 {
-  font-size: 20px;
-  color: #333;
+/* Service title */
+.services .service h2 {
+  font-size: 2.8rem; /* Increased font size for service titles */
   margin: 0;
-  line-height: 1.2;
+  color: maroon; /* Changed color to maroon */
+  font-weight: 700;
+  margin-bottom: 15px; /* Adjusted margin for better spacing */
+  text-align: center;
 }
 
-.service p {
-  font-size: 16px;
+/* Service description */
+.services .service p {
+  font-size: 1.4rem; /* Increased font size for service descriptions */
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
   color: #666;
-  line-height: 1.5;
 }
 
-/* Background image styles */
-.service::before {
-  content: "";
+/* Gradient overlay effect */
+.services .service::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 8px;
-  z-index: 0; /* Ensure background is behind text */
-  opacity: 0.5; /* Decrease image opacity */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(128, 0, 0, 0.1)); /* Example of changing gradient color to maroon */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
 }
 
-/* Background images and specific styles for each service */
-.student-counseling::before {
-  background-image: url('images/student1.png');
+.services .service:hover::before {
+  opacity: 1;
 }
 
-.visa-counseling::before {
-  background-image: url('images/visa1.png');
+/* Responsive design */
+@media (max-width: 1600px) {
+  .services {
+      padding: 50px; /* Adjusted padding for medium screens */
+  }
 }
 
-.jobs::before {
-  background-image: url('images/s3.png');
+@media (max-width: 1400px) {
+  .services {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted min-width for responsiveness */
+  }
 }
 
-.remittance::before {
-  background-image: url('images/Remittance1.png');
+@media (max-width: 1200px) {
+  .services {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Further adjusted min-width for smaller screens */
+  }
 }
 
-.tour-travel::before {
-  background-image: url('images/tour1.png');
+@media (max-width: 1024px) {
+  .services {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for tablets */
+  }
+
+  .services .service {
+      padding: 30px; /* Reduced padding for smaller screens */
+  }
+
+  .services .service h2 {
+      font-size: 2.4rem; /* Adjusted font size for smaller screens */
+  }
+
+  .services .service p {
+      font-size: 1.2rem; /* Adjusted font size for smaller screens */
+  }
 }
 
-.graphics-designing::before {
-  background-image: url('images/Web Designing.png');
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 2.5rem;
+  }
+
+  .services {
+      padding: 25px; /* Reduced padding for mobile screens */
+  }
+
+  .services .service h2 {
+      font-size: 2.2rem; /* Adjusted font size for mobile screens */
+  }
+
+  .services .service p {
+      font-size: 1.1rem; /* Adjusted font size for mobile screens */
+  }
 }
+
+@media (max-width: 480px) {
+  .section-title {
+      font-size: 2rem;
+  }
+
+  .services .service {
+      padding: 20px; /* Further reduced padding for smaller mobile screens */
+  }
+
+  .services .service h2 {
+      font-size: 2rem; /* Adjusted font size for smaller mobile screens */
+  }
+
+  .services .service p {
+      font-size: 1rem; /* Adjusted font size for smaller mobile screens */
+  }
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -1101,11 +1156,11 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #680000;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #680000;
 }
 
 input:checked + .slider:before {
@@ -1119,3 +1174,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+

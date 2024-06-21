@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title id="title">ACS</title>
   
-  <!-- Your existing stylesheets -->
+  <!-- Link to your separate CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/preloader.css" />
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -15,6 +16,12 @@
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 <body>
+  
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+  
   <!-- Navigation Bar -->
   <header class="header_section">
     <div class="container-fluid">
@@ -97,111 +104,105 @@
   <!-- service section -->
   <section class="service_section layout_padding">
     <div class="service_container">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2 id="service_heading">
-            Our <span>Services</span>
-          </h2>
-          <p id="service_paragraph">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-          </p>
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2 id="service_heading">
+                    Our <span>Services</span>
+                </h2>
+                <p id="service_paragraph">
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/student1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5 id="student_counseling_heading">Student Counseling</h5>
+                            <div class="btn-box">
+                                <!-- Updated link to point to #student-counseling in service.html -->
+                                <a href="./pages/service.html#student-counseling" id="student_counseling_button">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/visa1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5 id="visa_counseling_heading">Visa Counselling</h5>
+                            <div class="btn-box">
+                                <!-- Updated link to point to #visa-counseling in service.html -->
+                                <a href="./pages/service.html#visa-counseling" id="visa_counseling_button">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/s3.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5 id="jobs_heading">Jobs (part-time & full time)</h5>
+                            <div class="btn-box">
+                                <!-- Updated link to point to #service-jobs in service.html -->
+                                <a href="./pages/service.html#service-jobs" id="jobs_button">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/Remittance1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5 id="remittance_heading">Remittance</h5>
+                            <div class="btn-box">
+                                <!-- Updated link to point to #service-remittance in service.html -->
+                                <a href="./pages/service.html#service-remittance" id="remittance_button">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/tour1.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5 id="tour_heading">Tour & Travel Package</h5>
+                            <div class="btn-box">
+                                <!-- Updated link to point to #service-tour in service.html -->
+                                <a href="./pages/service.html#service-tour" id="tour_button">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/Web Designing.png" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5 id="graphics_heading">Graphics & Web Designing</h5>
+                            <div class="btn-box">
+                                <!-- Updated link to point to #service-graphics in service.html -->
+                                <a href="./pages/service.html#service-graphics" id="graphics_button">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/student1.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5 id="student_counseling_heading">
-                  Student Counseling
-                </h5>
-                <div class="btn-box">
-                  <a href="service.html" id="student_counseling_button">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/visa1.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5 id="visa_counseling_heading">
-                  Visa Counselling
-                </h5>
-                <div class="btn-box">
-                  <a href="service.html" id="visa_counseling_button">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/s3.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5 id="jobs_heading">
-                  Jobs (part-time & full time)
-                </h5>
-                <div class="btn-box">
-                  <a href="service.html" id="jobs_button">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/Remittance1.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5 id="remittance_heading">
-                  Remittance
-                </h5>
-                <div class="btn-box">
-                  <a href="service.html" id="remittance_button">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/tour1.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5 id="tour_heading">
-                  Tour & Travel Package
-                </h5>
-                <div class="btn-box">
-                  <a href="service.html" id="tour_button">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/Web Designing.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h5 id="graphics_heading">
-                  Graphics & Web Designing
-                </h5>
-                <div class="btn-box">
-                  <a href="service.html" id="graphics_button">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-    
+</section>
+
     
     <!-- end header section -->
     <!-- slider section -->
@@ -415,13 +416,12 @@
   
   <!-- footer section -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
   <script src="js/indextranslate.js"></script>
 
-  <!-- Translation Script -->
-  
+  <!-- Link to your separate JavaScript file for preloader -->
+
 </body>
 </html>

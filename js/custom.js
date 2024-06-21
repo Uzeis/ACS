@@ -43,6 +43,7 @@ function translateElements(element, sourceLang, targetLang) {
   }
 }
 
+
 function translateText(text, sourceLang, targetLang, callback) {
   var xhr = new XMLHttpRequest();
   var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=' + sourceLang + '&tl=' + targetLang + '&dt=t&q=' + encodeURIComponent(text);

@@ -518,14 +518,14 @@ input:checked + .slider::before {
 }
 
 .service_section .box .detail-box a {
-  color: #007bff;
+  color: #800000; /* Maroon color */
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .service_section .box .detail-box a:hover {
-  color: #0056b3;
+  color: #ffffff;
 }
 
 .service_section .btn-box {
@@ -538,15 +538,15 @@ input:checked + .slider::before {
   display: inline-block;
   padding: 12px 36px;
   background-color: transparent;
-  color: #007bff;
-  border: 2px solid #007bff;
+  color: #800000; /* Maroon color */
+  border: 2px solid #800000; /* Maroon color */
   border-radius: 50px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
 }
 
 .service_section .btn-box a:hover {
-  background-color: #007bff;
+  background-color: #800000; /* Maroon color */
   color: #ffffff;
   transform: translateY(-5px);
 }
@@ -582,7 +582,7 @@ input:checked + .slider::before {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #00bbf0;
+  background-color: #800000;
   color: #ffffff;
   border-radius: 0px;
   -webkit-transition: all 0.3s;

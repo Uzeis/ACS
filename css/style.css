@@ -592,7 +592,7 @@ input:checked + .slider::before {
 }
 
 .about_section .detail-box a:hover {
-  background-color: #721515;
+  background-color: #c4b1b1;
 }
 
 /* Updated styles for the "Why Choose Us" section */
@@ -717,7 +717,7 @@ input:checked + .slider::before {
 /* footer section*/
 /* Styling for the footer section */
 .footer_section {
-  background: linear-gradient(130deg, #6f1a21, #6b1a1a); /* Maroon red linear gradient */
+  background: linear-gradient(130deg, #6f1a21, #000000); /* Maroon red linear gradient */
   color: white; /* White text color */
   padding: 50px 0; /* Padding around the footer content */
 }
@@ -829,100 +829,57 @@ input:checked + .slider::before {
 
 
 /*# sourceMappingURL=style.css.map */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap'); /* New font for company name */
+
+/* General Styles */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Better, modern font */
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color: #f4f4f4; /* Neutral light background for contrast */
   color: #333;
+  line-height: 1.6;
 }
+
+/* Company Profile Section */
 .company-profile {
-    max-width: 1000px;
-    margin: 80px auto;
-    padding: 40px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background-image: url('../images/bhawana1.png'); /* Background image for content box */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85); /* Mid transparency overlay for readability */
+  z-index: 1;
+}
+
+.company-profile > * {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
 }
 
 .company-profile:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.company-profile h1 {
-    color: #007BFF;
-    font-size: 2.8em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.company-profile p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.company-overview {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
-}
-
-.company-profile h2 {
-    color: #007BFF;
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-
-.contact-info p {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-.contact-info p a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 5px;
-    transition: color 0.3s ease;
-}
-
-.contact-info p a:hover {
-    color: #0056b3;
-}
-
-.contact-info p i {
-    color: #007BFF;
-    margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-    .company-profile {
-        padding: 20px;
-    }
-
-    .company-profile h1 {
-        font-size: 2.2em;
-    }
-
-    .company-profile h2 {
-        font-size: 1.8em;
-    }
-
-    .services ul li {
-        flex: 1 1 calc(50% - 15px);
-    }
-}
-
-@media (max-width: 480px) {
-    .services ul li {
-        flex: 1 1 100%;
-    }
-}
+/* Company Header */
 .company-header {
   display: flex;
   align-items: center;
@@ -931,28 +888,188 @@ body {
 }
 
 .company-header .company-logo {
-  max-width: 200px;
-  height: 200px;
+  max-width: 120px;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid #007BFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Company Header */
 .company-header h1 {
-  font-family: 'Roboto', 'Times New Roman', Times; 
-  color: #007BFF; 
-  font-size: 3em; 
+  font-size: 3em;
+  font-family: 'Impact', sans-serif; /* More bold and attractive font */
+  color: transparent; /* Set color to transparent for gradient effect */
+  background: linear-gradient(90deg, red, black); /* Gradient from red to black */
+  -webkit-background-clip: text; /* Apply the background gradient to text */
+  -webkit-text-fill-color: transparent; /* Ensure the text color is transparent to show the gradient */
   margin: 0;
-  text-transform: uppercase; 
-  letter-spacing: 2px; 
-  font-weight: 700; 
+  text-transform: uppercase;
+  letter-spacing: 3px; /* Wider letter spacing for a more prominent effect */
 }
-
 
 .company-header h1:hover {
-  background: linear-gradient(90deg, #0056b3, #0094cc);
+  background: linear-gradient(90deg, #ff0000, #000000); /* Red to black gradient on hover */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease; /* Smooth transition for hover effect */
 }
+
+
+/* Overview Section */
+.company-overview p {
+  margin: 10px 0;
+  color: #4e5d6b; /* Slightly lighter gray for better readability */
+  font-size: 1.1rem; /* Slightly larger font size */
+  font-family: 'Lora', serif; /* Elegant serif font for paragraph text */
+}
+
+.company-overview p strong {
+  color: #2A3D66; /* Matching color to header */
+  font-weight: 600;
+}
+
+.company-overview {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+/* Contact Information */
+.contact-info h2 {
+  font-size: 2.2em;
+  color: #007BFF; /* Bright blue for contact section */
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Matching the general body font */
+}
+
+.contact-info address {
+  font-style: normal;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.contact-info p a {
+  color: #007BFF; /* Same blue color as the header */
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-info p a:hover {
+  color: #1a3e72; /* Darker blue on hover */
+}
+
+.contact-info p i {
+  margin-right: 10px;
+  color: #007BFF;
+  font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .company-profile {
+    padding: 20px;
+  }
+
+  .company-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .company-header h1 {
+    font-size: 2.2em;
+  }
+
+  .company-header .company-logo {
+    max-width: 100px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-info p a {
+    margin-left: 0;
+  }
+
+  .company-header h1 {
+    font-size: 2em;
+  }
+}
+/* Contact Information */
+.contact-info {
+  text-align: center; /* Center align the entire contact section */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the contact box */
+  border-radius: 8px; /* Rounded corners for the contact box */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact-info:hover {
+  background: rgba(0, 0, 0, 0); /* No color on hover, fully transparent */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow on hover for emphasis */
+  transform: translateY(-5px); /* Lift the box slightly for a floating effect */
+}
+
+.contact-info h2 {
+  font-size: 2.2em;
+  color: #FF0000; /* Red color for the header */
+  margin-bottom: 15px;
+  text-align: center; /* Center align the header */
+  font-family: 'Playfair Display', serif; /* Elegant serif font for header */
+}
+
+.contact-info address {
+  font-style: normal;
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font for address */
+  text-align: center; /* Center align address */
+}
+
+.contact-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif; /* Clean and modern sans-serif font */
+  justify-content: center; /* Center align the text in the paragraph */
+}
+
+.contact-info p a {
+  color: #FF0000; /* Red color for links */
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-info p a:hover {
+  color: #000000; /* Black color on hover */
+}
+
+.contact-info p i {
+  margin-right: 10px;
+  color: #FF0000; /* Red color for icon */
+  font-size: 1.2em;
+}
+
+
 /* CSS for Services Section */
 
 /* Section title */

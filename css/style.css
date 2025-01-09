@@ -743,33 +743,39 @@ input:checked + .slider::before {
   border: 0;
 }
 
-/* Styling for footer links */
-.footer_link_box h4 {
-  font-size: 18px; /* Heading font size */
-  margin-bottom: 15px; /* Spacing below the heading */
+.footer_section {
+  background: linear-gradient(90deg, #000000,maroon);
+  color: #fff;
+  padding: 50px 0;
 }
 
-.footer_links {
-  list-style-type: none; /* Remove default list styles */
-  padding-left: 0; /* Remove default padding */
+.footer_title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer_links,
+.contact_list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_links li,
+.contact_list li {
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer_links a {
-  display: block; /* Display links as blocks */
-  color: inherit; /* Inherit text color */
-  margin-bottom: 5px; /* Spacing between links */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth color transition */
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
 .footer_links a:hover {
-  color: #f0f0f0; /* Link color on hover */
-}
-
-/* Styling for contact information */
-.footer_contact h4 {
-  font-size: 18px; /* Heading font size */
-  margin-bottom: 15px; /* Spacing below the heading */
+  color: #FFCCCC;
 }
 
 .contact_link_box {
@@ -1085,155 +1091,171 @@ body {
 
 /* Services grid container */
 /* Services grid container */
-.services {
-  max-width: 1800px;
-  margin: 120px auto 0; /* Increased top margin further to move services down */
-  padding: 60px 0; /* Adjusted padding for top and bottom */
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  background-color: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Service article */
-.services .service {
-  background-color: #f9f9f9;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 40px; /* Increased padding for better content spacing */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Service hover effect */
-.services .service:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Service header */
-.services .service header {
-  padding: 10px 0;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 20px;
-}
-
-/* Service title */
-.services .service h2 {
-  font-size: 2.8rem; /* Increased font size for service titles */
+/* /* General page styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
   margin: 0;
-  color: maroon; /* Changed color to maroon */
-  font-weight: 700;
-  margin-bottom: 15px; /* Adjusted margin for better spacing */
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Title Styling */
+/* Title Styling */
+.services-title {
   text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding-bottom: 20px; 
+  padding-top: 50px;/* Adjusted padding below the title */
 }
 
-/* Service description */
-.services .service p {
-  font-size: 1.4rem; /* Increased font size for service descriptions */
-  line-height: 1.8;
-  text-align: justify;
-  margin-bottom: 20px;
-  color: #666;
-}
 
-/* Gradient overlay effect */
-.services .service::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Service Section */
+.services {
+  padding: 60px 0;
+  background-color: #ffffff;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(128, 0, 0, 0.1)); /* Example of changing gradient color to maroon */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 20px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.services .service:hover::before {
-  opacity: 1;
+.service {
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: #f8d7da; /* Light red for service 1 */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
 }
 
-/* Responsive design */
-@media (max-width: 1600px) {
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* Add Image on the Left Side of the Service Card */
+.service img {
+  position: relative;
+  width: 150px; /* Adjust size of the image */
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px; /* Space between image and content */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Content Section */
+.service .content {
+  flex-grow: 1;
+}
+
+.service header {
+  margin-bottom: 20px;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.service p {
+  font-size: 1.125rem;
+  color: #333;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.service h2 {
+  font-size: 2.25rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Background Color Variations for Each Service */
+#student-counseling {
+  background-color: #f8d7da; /* Light Red */
+  border-left: 8px solid #dc3545; /* Red Border */
+}
+
+#career-guidance {
+  background-color: #d1ecf1; /* Light Blue */
+  border-left: 8px solid #17a2b8; /* Blue Border */
+}
+
+#study-abroad {
+  background-color: #f8f9fc; /* Light Black/Gray */
+  border-left: 8px solid #343a40; /* Dark Gray/Black Border */
+}
+
+#remittance {
+  background-color: #d4edda; /* Light Green */
+  border-left: 8px solid #28a745; /* Green Border */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
   .services {
-      padding: 50px; /* Adjusted padding for medium screens */
-  }
-}
-
-@media (max-width: 1400px) {
-  .services {
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted min-width for responsiveness */
-  }
-}
-
-@media (max-width: 1200px) {
-  .services {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Further adjusted min-width for smaller screens */
-  }
-}
-
-@media (max-width: 1024px) {
-  .services {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for tablets */
+    padding: 50px 20px;
   }
 
-  .services .service {
-      padding: 30px; /* Reduced padding for smaller screens */
+  .service {
+    padding: 30px;
   }
 
-  .services .service h2 {
-      font-size: 2.4rem; /* Adjusted font size for smaller screens */
+  .service h2 {
+    font-size: 1.8rem;
   }
 
-  .services .service p {
-      font-size: 1.2rem; /* Adjusted font size for smaller screens */
+  .service p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .section-title {
-      font-size: 2.5rem;
-  }
-
   .services {
-      padding: 25px; /* Reduced padding for mobile screens */
+    padding: 40px 20px;
   }
 
-  .services .service h2 {
-      font-size: 2.2rem; /* Adjusted font size for mobile screens */
+  .service {
+    padding: 25px;
   }
 
-  .services .service p {
-      font-size: 1.1rem; /* Adjusted font size for mobile screens */
+  .service h2 {
+    font-size: 1.6rem;
+  }
+
+  .service p {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .section-title {
-      font-size: 2rem;
+  .services {
+    padding: 30px 15px;
   }
 
-  .services .service {
-      padding: 20px; /* Further reduced padding for smaller mobile screens */
+  .service {
+    padding: 15px;
   }
 
-  .services .service h2 {
-      font-size: 2rem; /* Adjusted font size for smaller mobile screens */
+  .service h2 {
+    font-size: 1.4rem;
   }
 
-  .services .service p {
-      font-size: 1rem; /* Adjusted font size for smaller mobile screens */
+  .service p {
+    font-size: 0.9rem;
   }
 }
 
